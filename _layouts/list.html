@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+{% assign posts = site.posts | sort:"number" %}
+
+<ol>
+  {%- for post in posts -%}
+  <li> <a href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a> </li>
+  {%- endfor -%}
+</ol>
